@@ -1,6 +1,7 @@
-from ListItem import ListItem
+from src.ListItem import ListItem
+from src.AuxMethods import Auxiliary as Aux
 
-class List:
+class PlannerList:
     listItems = []
     listLength = len(listItems)
 
@@ -16,33 +17,20 @@ class List:
         if type(item_to_add) is not ListItem:
             raise TypeError("Invalid Entry")
         else:
-            self.listItems.append(item_to_add)
+            Aux.add_to_list(self.listItems, item_to_add)
             self.listLength += 1
 
     def delete_item(self, item_to_delete):
         # test this (passed)
         if type(item_to_delete) is not ListItem:
             raise TypeError("Invalid Entry")
-        i = 0
-        for item in self.listItems:
-            if item is item_to_delete:
-                self.remove_entry_from_list(i)
-                return True
-            else:
-                i += 1
-        
-        raise ValueError("Item is not in the list")
+        res = Aux.find_index_of_item(self.listItems, item_to_delete)
+        if not res:    
+            raise ValueError("Item is not in the list")
     
     def clear_items(self):
         self.listItems = []
         self.listLength = len(self.listItems)
-
-    def remove_entry_from_list(self, index_one):
-        # test this (passed)
-        tmpItem = self.listItems[self.listLength - 1]                       # store item at end
-        self.listItems[self.listLength - 1] = self.listItems[index_one]     # move deleted item to the end
-        self.listItems[index_one] = tmpItem                                 # add previous item at end to the location of the deleted item
-        self.listItems.pop()                                                # pop deleted item from list
 
 
     def change_time_slot():

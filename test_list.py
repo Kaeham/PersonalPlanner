@@ -1,10 +1,10 @@
 import unittest
 
-from PlannerList import List
-from ListItem import ListItem
+from src.PlannerList import PlannerList
+from src.ListItem import ListItem
 
 class TestList(unittest.TestCase):
-    testList = List("test", "any")
+    testList = PlannerList("test", "any")
 
 
     def test_add(self):
