@@ -21,3 +21,9 @@ class Auxiliary:
             else:
                 i += 1
         return False
+    
+    @staticmethod
+    def swap_items_in_list(_list, index_one, index_two):
+        tmpItem = _list[index_one]
+        _list[index_one] = _list[index_two]
+        _list[index_two] = tmpItem
