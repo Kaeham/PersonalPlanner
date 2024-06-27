@@ -1,5 +1,5 @@
-from src.ListItem import ListItem
-from src.AuxMethods import Auxiliary as Aux
+from ListItem import ListItem
+from AuxMethods import Auxiliary as Aux
 
 class PlannerList:
     listItems = []
@@ -24,9 +24,12 @@ class PlannerList:
         # test this (passed)
         if type(item_to_delete) is not ListItem:
             raise TypeError("Invalid Entry")
-        res = Aux.find_index_of_item(self.listItems, item_to_delete)
-        if not res:    
+        index = Aux.find_index_of_item(self.listItems, item_to_delete)
+        if not index:
             raise ValueError("Item is not in the list")
+        else:
+            Aux.delete_from_list(self.listItems, index) 
+            
     
     def clear_items(self):
         self.listItems = []
