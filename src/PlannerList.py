@@ -40,4 +40,10 @@ class PlannerList:
         pass
 
     def change_list_order():
-        pass 
+        pass
+
+    def __str__(self) -> str:
+        res = ""
+        for item in self.listItems:
+            res += str(item) + "\n"
+        return res

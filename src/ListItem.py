@@ -15,7 +15,7 @@ class ListItem:
 
     def __str__(self) -> str:
         res = ""
-        res += self.name + " " + self.desc
+        res += self.name + ": " + self.desc
         return res
 
     # def edit_name():
