@@ -1,7 +1,7 @@
 import unittest
 
 # from src.PlannerList import PlannerList
-from PlannerList import PlannerList
+from src.PlannerList import PlannerList
 from ListItem import ListItem
 
 class TestList(unittest.TestCase):
