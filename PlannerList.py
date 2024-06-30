@@ -30,14 +30,12 @@ class PlannerList:
         else:
             Aux.delete_from_list(self.listItems, index) 
             
-    
     def clear_items(self):
         self.listItems = []
         self.listLength = len(self.listItems)
 
-
-    def change_time_slot():
-        pass
+    def change_time_slot(self, new_time_slot):
+        self.timeSlot = new_time_slot
 
     def change_list_order():
         pass

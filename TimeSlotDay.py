@@ -33,4 +33,6 @@ today = date.today()
 d3 = today.strftime("%A") # weekday in str form
 d1 = today.strftime("%d") # day of month
 d2 = today.strftime("%m") # month in int form
+
+
 # print(today)
