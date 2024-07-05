@@ -4,10 +4,11 @@ from AuxMethods import Auxiliary as Aux
 
 
 class TimeSlotDay:
-    tasks = []
+    
 
     def __init__(self, date_time) -> None:
         self.date = date_time
+        self.tasks = []
 
     def add_task(self, task_to_add) -> None:
         if type(task_to_add) is not PlannerList:
@@ -21,6 +22,9 @@ class TimeSlotDay:
 
     def change_list_order(self, task_one, task_two) -> None:
         pass
+
+    def get_tasks(self):
+        return self.tasks
 
     def __str__(self) -> str:
         res = ""
