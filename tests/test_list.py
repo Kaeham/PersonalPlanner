@@ -1,8 +1,7 @@
 import unittest
 
-# from src.PlannerList import PlannerList
 from src.PlannerList import PlannerList
-from ListItem import ListItem
+from src.ListItem import ListItem
 
 class TestList(unittest.TestCase):
     testList = PlannerList("test", "any")
