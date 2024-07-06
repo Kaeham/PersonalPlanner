@@ -30,7 +30,7 @@ class TimeSlotDay:
         res = ""
         res += self.date.strftime("%d %A") + "\n"
         for task in self.tasks:
-            res+= str(task) + "\n"
+            res+= "\t" + str(task) + "\n"
         return res
 
 today = date.today()
